@@ -7,15 +7,15 @@ class Solution {
         int hori = matrix.length;
         int row = matrix[0].length;
         for(int i = 0;i< hori;i++){
-            for(int j = 0;j<matrix[i].length;j++){
-                matrix[i][j]=0;
+            for(int j = 0;j<row;j++){
+                returnMatrix[i][j]=0;
                 if(matrix[i][j]==0)
                     returnMatrix[i][j] = 0;
                 else {
                     int distance = 1;
                     for(distance = 1;distance<max(hori,row);distance++)
                     {
-                        for(int count = 0;count<distance;count++)
+                        for(int count = 0;count<=distance;count++)
                         {
                             if(i-count>=0 && j-(distance-count)>=0 && matrix[i-count][j-(distance-count)]==0)
                             {
